@@ -8,7 +8,7 @@ import androidx.lifecycle.MutableLiveData
  * Created by shekhar on 2019-07-19.
  * Tricog Health Services Pvt Ltd © 2019 | All rights reserved
  */
-class Game(playerOne: String, playerTwo: String) {
+class Game(private var playerOne: String, private var playerTwo: String) {
 
     private val TAG = Game::class.java.simpleName
     private val BOARD_SIZE = 3
@@ -115,5 +115,12 @@ class Game(playerOne: String, playerTwo: String) {
                 return false
 
         return true
+    }
+
+    fun reset() {
+        cells = arrayOf()
+        player1 = Player(playerOne, "X")
+        player2 = Player(playerTwo, "O")
+        currentPlayer = player1
     }
 }
