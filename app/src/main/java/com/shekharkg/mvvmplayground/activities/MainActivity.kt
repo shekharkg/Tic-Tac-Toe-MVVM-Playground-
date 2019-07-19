@@ -1,7 +1,8 @@
-package com.shekharkg.mvvmplayground
+package com.shekharkg.mvvmplayground.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.shekharkg.mvvmplayground.R
 
 class MainActivity : AppCompatActivity() {
 
